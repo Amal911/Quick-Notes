@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+   
+
+
+<div class="section1">
+    <% if(locals.heading && locals.content){ %>
+    <% for (i in heading ){ %>
+        <div class="note">
+            <h1><em><%= heading[i] %></em></h1>
+            <p><%= content[i] %></p>
+        </div>
+    <% }} %>
+   
+    <div class="note new">
+        <form action="<%= link %>" method="post">
+            <input type="text" placeholder="Heading" name="title">
+            <br>
+            <!-- <input type="text" placeholder="Content" name="para" size="100"> -->
+            <textarea name="para" id="" cols="22" rows="5" placeholder="Content"></textarea>
+            <br>
+            <button type="submit" class="button-81">Add</button>    
+        </form>
+    </div>
+</div>
+
+
+
+<%- include("partials/footer.ejs") %>
