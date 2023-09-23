@@ -3,14 +3,21 @@
 
 
 <div class="section1">
-    <% if(locals.heading && locals.content){ %>
-    <% for (i in heading ){ %>
+    <% if(notes){ %>
+    <% for (i in notes ){ %>
         <div class="note">
-            <h1><em><%= heading[i] %></em></h1>
-            <p><%= content[i] %></p>
+            <form  action="/delete" method="post" class="dltform">
+                <input type="hidden" value=<%=notes[i]._id %> name= "deleteId">
+                <button type="submit"  class="closebtn button-81 btn"><i class="ri-close-fill"></i></button>
+            </form>
+            <h1><em><%= notes[i].heading %></em></h1>
+            <p><%= notes[i].note %></p>
         </div>
     <% }} %>
    
+        
+
+
     <div class="note new">
         <form action="<%= link %>" method="post">
             <input type="text" placeholder="Heading" name="title">

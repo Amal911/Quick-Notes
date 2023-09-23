@@ -87,6 +87,7 @@ input[name= para]{
 
 
 
+
 /* CSS */
 .button-81 {
   background-color: #fff;
@@ -121,4 +122,20 @@ input[name= para]{
     font-size: 1.125rem;
     padding: 1rem 2rem;
   }
+}
+
+
+.closebtn{
+   position: relative;
+   left: 97%;
+   bottom: 30px;
+    border-radius: 50%;
+    font-weight: 900;
+    /* font-size: 1rem; */
+    padding: 10px;
+    background-color: #1e293b;
+    color: #e2e8f0;
+}
+.dltform{
+    height: 0;
 }
