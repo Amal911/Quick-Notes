@@ -5,9 +5,9 @@ It is a Clone of Google Keep Notes
 Technologies Used
 -----------------
 Front End Technologies:
-  HTML
-  CSS
-  EJS
+  HTML,
+  CSS,
+  EJS,
   JavaScript
   
 Back End Technologies:
