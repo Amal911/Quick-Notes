@@ -3,6 +3,21 @@
 
 
 <div class="section1">
+    <div class=" ">
+        <form action="<%= link %>" method="post" class="new">
+            <input type="text" placeholder="Heading" name="title" >
+            <br>
+            <!-- <div contenteditable="true" role="textbox" name="para" style="background-color: white;"></div> -->
+            
+            <input type="text" name="para"id="" placeholder="Take a note...." >
+            <br>
+            <button type="submit" class="button-81">Add</button>    
+        </form>
+    </div>
+</div>
+
+<div class="section2">
+    
     <% if(notes){ %>
     <% for (i in notes ){ %>
         <div class="note">
@@ -10,7 +25,7 @@
                 <input type="hidden" value=<%=notes[i]._id %> name= "deleteId">
                 <button type="submit"  class="closebtn button-81 btn"><i class="ri-close-fill"></i></button>
             </form>
-            <h1><em><%= notes[i].heading %></em></h1>
+            <h3><em><%= notes[i].heading %></em></h3>
             <p><%= notes[i].note %></p>
         </div>
     <% }} %>
@@ -18,16 +33,7 @@
         
 
 
-    <div class="note new">
-        <form action="<%= link %>" method="post">
-            <input type="text" placeholder="Heading" name="title">
-            <br>
-            <!-- <input type="text" placeholder="Content" name="para" size="100"> -->
-            <textarea name="para" id="" cols="22" rows="5" placeholder="Content"></textarea>
-            <br>
-            <button type="submit" class="button-81">Add</button>    
-        </form>
-    </div>
+    
 </div>
 
 

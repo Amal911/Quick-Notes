@@ -27,11 +27,6 @@ const note1 = new Note({
 
 
 
-// var Heading = [];
-// var Content = [];
-
-var workHeading = [];
-var workContent = [];
 var link;
 
 
@@ -62,6 +57,9 @@ app.post("/",function(req,res){
         newNote.save();
         res.redirect("/");
     }
+    else{
+        res.redirect("/");
+    }
 });
 
 app.post("/delete",function(req,res){
@@ -88,27 +86,27 @@ app.post("/delete",function(req,res){
 
 
 
-app.get("/work", function(req,res){
-    link = "/work"
-    res.render("index.ejs",{
-        link:link,
-        heading:workHeading,
-        content:workContent
-    });
-});
+// app.get("/work", function(req,res){
+//     link = "/work"
+//     res.render("index.ejs",{
+//         link:link,
+//         heading:workHeading,
+//         content:workContent
+//     });
+// });
 
 
 
 
-app.post("/work",function(req,res){
-    var head = req.body.title
-    var cont = req.body.para
-    if(head || cont){
-        workHeading.push(head);
-        workContent.push(cont);
-        res.redirect("/work");
-    }
-});
+// app.post("/work",function(req,res){
+//     var head = req.body.title
+//     var cont = req.body.para
+//     if(head || cont){
+//         workHeading.push(head);
+//         workContent.push(cont);
+//         res.redirect("/work");
+//     }
+// });
 
 app.listen(port, () => {
     console.log("Server is running..");
