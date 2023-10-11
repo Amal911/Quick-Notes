@@ -1,7 +1,17 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap"); */
+
+
+:root{
+  --body_color_drk: #202124;
+  --note_color_dark: #808080;
+  --input_color_drk: #e2e8f0;
+
+}
+
 
 body{
     margin: 0;
-    background-color: #202124;
+    background-color: var(--body_color_drk);
     /* color: #e2e8f0;ss */
 }
 
@@ -21,6 +31,7 @@ body{
     padding: 0 20px;
     border: 1px solid #808080;
     border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 
@@ -69,10 +80,19 @@ body{
   /* width: 22%; */
   min-width: 200px;
   height: fit-content;
-  background-color: gray;
-  border-radius: 30px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  background-color: var(--body_color_drk  );
+  border-radius: 15px;
+  border: 1px solid #868c95;
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   break-inside: avoid;
+  color: #fff ;
+}
+.note h3{
+  font-size: 18px;
+}
+.note p{
+  font-size: 16px;
 }
 
 
@@ -83,18 +103,22 @@ input[type=text]{
     width: 100%;
     margin: 4px 0;
     padding: 0 20px;
-    background-color: #202124;
-    color: #e2e8f0;
+    background-color: var(--body_color_drk);
+    color: var(--input_color_drk);
     border: none;
 }
 
+input[type=text]:focus{
+  outline: none;
+}
+
 input[name=title]{
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 500;
 }
 
 input[name=para]{
-    font-size: 16px;
+    font-size: 14px;
 }
 
 ::placeholder{
@@ -111,7 +135,7 @@ input[name=para]{
 
 .copy{
     text-align: center;
-    color: #e2e8f0;
+    color: #868c95;
 }
 
 
@@ -154,7 +178,7 @@ input[name=para]{
 }
 
 .button-81:hover {
-  background-color: #fff;
+  background-color: #868c95;
   color: #0d172a;
 }
 
@@ -225,4 +249,73 @@ input[name=para]{
 }
 .dltform{
     height: 0;
+}
+
+
+
+
+
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #111;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {color: #f1c40f;}
+
+.fa-sun {color: #f39c12;}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+.theme{
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.light{
+  background-color: #fff;
+}
+
+body.light .note, body.light ::placeholder, body.light input{
+  background-color: #fff;
+}
+body.light input, body.light .note{
+  color: #000000;
+
 }
