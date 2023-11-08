@@ -1,6 +1,8 @@
 Quick Notes is a notes taking Application that can be used to store short notes and all.
 It is a Clone of Google Keep Notes
 
+<img align="center" alt="" src="">
+
 
 Technologies Used
 -----------------
